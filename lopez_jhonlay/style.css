@@ -5,160 +5,265 @@
 }
 
 body {
+    width: 100%;
     font-family: 'Poppins', sans-serif;
 }
 
-.parent-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+.header-section {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #BE3144;
+    position: fixed;
+    z-index: 10;
 }
 
-.child-container {
+.header-section p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #F0F0F0;
+}
+
+.welcome-section {
+    width: 100%;
+    height: 90vh;
+    background-color: #252528;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px
 }
 
-h1 {
-    background-color: #85000F;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
 }
 
-h1,
-h2 {
+.image-container img {
+    width: 90%; 
+    height: auto;
+}
+
+.text-container h1{
+    font-size: 1.5rem;
+    color: #F0F0F0;
+}
+
+.text-container p {
+    color: #BE3144;
+    font-style: italic;
+}
+
+.about-me-section {
+    background-color: #45567D;
+    padding: 60px 50px;
+}
+
+.about-me-section h2 {
+    color: #F0F0F0;
+    font-size: 1.3rem;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .interest-hobbies {
-    line-height: 40px;
-    color: #31383F;
+    list-style: none;
+}
+
+.interest-hobbies li:nth-child(1)::before {
+    content: "🎶";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.interest-hobbies li:nth-child(3)::before {
+    content: "🎸";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.interest-hobbies li:nth-child(5)::before {
+    content: "📺";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.interest-hobbies li:nth-child(7)::before {
+    content: "🎮";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.interest-hobbies li:nth-child(9)::before {
+    content: "🎨";
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.interest-hobbies li {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #252528;
 }
 
 .interest-hobbies p {
-    text-indent: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #F0F0F0;
 }
 
-.interest-hobbies li,
-.my-works li {
-    list-style-type: none;
-    font-style: italic;
-    font-weight: bold;
+.works-section {
+    background-color: #303841;
+    color: #F0F0F0;
+    padding: 60px 50px;
+    
 }
 
-.my-works a {
-    padding: 5px 0;
-    color: #31383F;
-    text-decoration: none;
+.works-section h2,
+.goals-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.my-works a:hover {
-    color: #2A8DCE;
-}
-
-.testimonials {
-    line-height: 40px;
-}
-
-.testimonials p {
-    color: #31383f;
-}
-
-.gallery h2 {
-    padding: 15px;
-}
-
-.gallery-img{
+.work-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-.gallery-img img {
-    width: 400px;
+.work-list div {
+    text-align: center;
+    background-color: #45567D;
+    transition: transform 0.3s ease-in-out;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
 }
 
-.gallery-img img:hover {
+.work-list div:hover {
     transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-.goals ul{
-    list-style-type: none;
+.work-list p {
+    padding: 1rem 0.5rem;
 }
 
-.comment-section {
-    display: flex;
-    flex-direction: column;
-    background-color: #000;
-    color: #C5B9B1;
-    margin: 20px 0;
-    padding: 10px;
+.works-section img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.comment-section p{
-    display: inline-block;
-    margin: 5px;
-    background-color: #31383f;
-    padding: 5px;
-    border-radius: 20px;
+.goals-section {
+    background-color: #252528;
+    color: #F0F0F0;
+    padding: 60px 50px;
 }
 
-.message-form {
-    margin: 50px 0;
-    padding: 20px 0;
+.goals-section li {
+    margin-bottom: 10px;
 }
 
-.form-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.goals-section span {
+    color: #BE3144;
 }
 
-.message-form {
-    width: 50%;
-    min-width: 400px;
-    background-color: #85000F;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
+.journal span {
+    display: block;
+    margin-top: 20px;
 }
 
-.message-form form {
-    width: 100%;
-    max-width: 400px;
+.contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
-    backdrop-filter: blur( 8px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 10px;
+    justify-content: center;
+    background-color: #45567D;
+    padding: 30px 25px;
+    border-top: 5px solid #BE3144;
+    color: #F0F0F0;
 }
 
-#name {
-    width: 246px;
-    padding: 5px;
-    margin-bottom: 5px;
+.contact-section h2 {
+    margin-bottom: 30px;
 }
 
-#message, #comment_button{
-    padding: 5px;
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#comment_button {
-    cursor: pointer;
+.socials a {
+    text-decoration: none;
+    transition: transform 0.3s ease-out;
+}
+
+.socials a:hover {
+    transform: translateY(8px);
+}
+
+.socials i,
+.socials a {
+    color: #F0F0F0;
+}
+
+@media only screen and (min-width: 480px) {
+    .header-section p {
+        font-size: 1.5rem;
+    }
+
+    .welcome-section {
+        height: 100vh;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0;        
+    }
+
+    .image-container img {
+        margin-top: -100px;
+        width: 80%;
+        
+    }
+
+    .text-container h1{
+        font-size: 2.5rem;
+        color: #F0F0F0;
+    }
+
+    .text-container p {
+        font-size: 1.5rem;
+    }
+
+    .about-me-section h2,
+    .works-section h2,
+    .goals-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .works-section img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .work-list {
+        justify-content: flex-start;
+    }
+
+    .contact-section {
+        padding: 60px 50px;
+    }
+
+    .socials {
+        flex-direction: row;
+        font-size: 1.5rem;
+        gap: 50px;
+    }
+
+
 }
