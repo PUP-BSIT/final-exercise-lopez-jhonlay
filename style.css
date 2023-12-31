@@ -9,6 +9,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header-section {
     width: 100%;
     padding: 10px;
@@ -20,9 +24,21 @@ body {
 }
 
 .header-section p {
-    font-size: 1rem;
-    text-transform: uppercase;
+    text-align: center;
     color: #F0F0F0;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: none;
+}
+
+.nav-links a {
+    display: none;
+}
+
+.nav-links {
+    display: none;
 }
 
 .welcome-section {
@@ -213,8 +229,37 @@ body {
 }
 
 @media only screen and (min-width: 480px) {
-    .header-section p {
+    .header-section {
+        padding: 10px 60px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        display: inline;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+
+    .header-section a {
+        color: #F0F0F0;
+    }
+
+    .logo {
+        display: contents;
+        font-weight: bold;
         font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #F0F0F0;
+    }
+
+    .header-section p {
+        display: none;
     }
 
     .welcome-section {
