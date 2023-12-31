@@ -29,15 +29,9 @@ html {
     text-transform: uppercase;
 }
 
-.logo {
-    display: none;
-}
-
+.logo,
+.nav-links,
 .nav-links a {
-    display: none;
-}
-
-.nav-links {
     display: none;
 }
 
